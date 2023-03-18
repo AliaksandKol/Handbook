@@ -1,15 +1,14 @@
 package com.example.myfamilyhandbook
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myfamilyhandbook.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    val notes = NotesManager.getNotes()
-    val adapter = NoteAdapter(notes)
+    private val notes = NotesManager.getNotes()
+    private val adapter = NoteAdapter(notes)
 
     private val bindingClass: ActivityMainBinding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
@@ -23,23 +22,22 @@ class MainActivity : AppCompatActivity() {
         bindingClass.AddNoteButton.setOnClickListener {
             showAddNoteDialog()
         }
-        refreshApp()
-    }
-        fun init() {
-            bindingClass.rcView.layoutManager = LinearLayoutManager(this@MainActivity)
-            bindingClass.rcView.adapter = adapter
-        }
-    private fun refreshApp() {
-        bindingClass.SwipeRefreshlayout.setOnRefreshListener {
-            bindingClass.SwipeRefreshlayout.isRefreshing = false
-        }
 
     }
+
+
+
+    private fun init() {
+        bindingClass.rcView.layoutManager = LinearLayoutManager(this@MainActivity)
+        bindingClass.rcView.adapter = adapter
+    }
+
+
 
 
 
     private fun showAddNoteDialog() {
-        val intent = Intent(this, MainActivity2::class.java)
+        val intent = Intent(this, AddNewNote::class.java)
         startActivity(intent)
     }
 
