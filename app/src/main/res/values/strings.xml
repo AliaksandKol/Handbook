@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyFamilyHandbook</string>
+    <string name="ID">ID:</string>
+    <string name="Name">Name:</string>
+    <string name="Age">Age:</string>
+    <string name="Title">Add Item:</string>
+
+</resources>
