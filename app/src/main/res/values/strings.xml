@@ -4,5 +4,8 @@
     <string name="Name">Name:</string>
     <string name="Age">Age:</string>
     <string name="Title">Add Item:</string>
+    <string name="save">Save</string>
+    <string name="add_name">Add Name</string>
+    <string name="add_age">Add Age</string>
 
 </resources>
