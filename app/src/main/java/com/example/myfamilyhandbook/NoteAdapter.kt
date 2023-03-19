@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 class NoteAdapter(private val notes: List<Note>) :
     RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.sample, parent, false)
@@ -26,9 +25,9 @@ class NoteAdapter(private val notes: List<Note>) :
     }
 
     class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val idTextView: TextView = itemView.findViewById(R.id.IdText)
-        private val nameTextView: TextView = itemView.findViewById(R.id.NameText)
-        private val ageTextView: TextView = itemView.findViewById(R.id.AgeText)
+        private val idTextView: TextView = itemView.findViewById(R.id.idText)
+        private val nameTextView: TextView = itemView.findViewById(R.id.nameText)
+        private val ageTextView: TextView = itemView.findViewById(R.id.ageText)
 
         fun bind(note: Note) {
             idTextView.text = note.id.toString()
