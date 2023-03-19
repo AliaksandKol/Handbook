@@ -13,29 +13,22 @@ class AddNewNote : AppCompatActivity() {
         bindingClass2 = ActivityMain2Binding.inflate(layoutInflater)
         setContentView(bindingClass2.root)
         saveButton()
-
     }
-
 
     private fun saveButton() {
         val name = bindingClass2.nameEditText.text
         val age = bindingClass2.ageEditText.text
 
-        bindingClass2.Savebutton.setOnClickListener {
+        bindingClass2.saveButton.setOnClickListener {
             NotesManager.addNote(name.toString(), age.toString().toInt())
             returnToActivity()
-
         }
-
     }
-
 
     private fun returnToActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
-
-
 }
 
 
