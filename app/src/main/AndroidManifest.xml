@@ -12,7 +12,7 @@
         android:theme="@style/Theme.MyFamilyHandbook"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity2"
+            android:name=".AddNewNote"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

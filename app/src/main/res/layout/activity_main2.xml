@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2">
+    tools:context=".AddNewNote">
 
     <Button
-        android:id="@+id/Savebutton"
+        android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginBottom="52dp"
         android:backgroundTint="?android:attr/colorActivatedHighlight"
         android:paddingVertical="8dp"
-        android:text="Save"
+        android:text="@string/save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -35,11 +35,11 @@
 
     <EditText
         android:id="@+id/nameEditText"
-        android:layout_width="256dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="Add Name"
+        android:hint="@string/add_name"
         android:inputType="text"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -54,11 +54,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Add Age"
+        android:hint="@string/add_age"
         android:inputType="number"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/Savebutton"
+        app:layout_constraintBottom_toTopOf="@+id/saveButton"
         app:layout_constraintEnd_toEndOf="@+id/nameEditText"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/nameEditText"
