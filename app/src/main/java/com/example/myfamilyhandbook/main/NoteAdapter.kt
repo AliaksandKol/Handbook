@@ -1,13 +1,21 @@
-package com.example.myfamilyhandbook
+package com.example.myfamilyhandbook.main
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myfamilyhandbook.R
+import com.example.myfamilyhandbook.manager.Note
 
-class NoteAdapter(private val notes: List<Note>) :
-    RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
+class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
+
+    private var notes: List<Note> = emptyList()
+
+    fun updateNotes(notes: List<Note>) {
+        this.notes = notes
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
         val view = LayoutInflater.from(parent.context)
